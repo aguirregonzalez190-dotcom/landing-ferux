@@ -306,7 +306,13 @@
     .cta-content h2 { font-size: clamp(1.9rem, 4.5vw, 2.9rem); font-weight: 800; margin-bottom: 1rem; }
     .cta-content p { font-size: 1.05rem; margin-bottom: 2.5rem; opacity: .95; line-height: 1.7; }
 
-    .cta-form { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .cta-form { display: flex; flex-direction: column; gap: .8rem; max-width: 480px; margin: 0 auto; }
+    .cta-btn { padding: .85rem 1.5rem; border: none; background: rgba(255,255,255,.95); color: var(--green); font-weight: 700; border-radius: 10px; cursor: pointer; transition: all .2s; font-size: .95rem; }
+    .cta-btn:hover { background: #fff; transform: translateY(-2px); }
+    .cta-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    .cta-message { margin-top: 1rem; padding: 1rem; border-radius: 10px; font-size: .9rem; display: none; }
+    .cta-message.success { background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.3); color: #fff; display: block; }
+    .cta-message.error { background: rgba(255,100,100,.3); border: 1px solid rgba(255,100,100,.5); color: #fff; display: block; }
     .cta-input {
       flex: 1; min-width: 220px; max-width: 340px;
       background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
@@ -661,10 +667,15 @@
     <h2>¿Cuánto estás gastando de más en combustible?</h2>
     <p>Solicitá un diagnóstico energético inicial sin costo. Te enviaremos un análisis preliminar en 48 horas.</p>
 
-    <form class="cta-form" onsubmit="handleSubmit(event)">
-      <input class="cta-input" type="email" placeholder="tu@empresa.com" required />
-      <button type="submit" class="btn btn-primary" style="background: rgba(255,255,255,.95); color: var(--green); font-weight: 700;">Solicitar diagnóstico</button>
+<form class="cta-form" id="contactForm">
+      <input class="cta-input" type="text" id="nombre" placeholder="Tu nombre" required />
+      <input class="cta-input" type="email" id="email" placeholder="tu@empresa.com" required />
+      <input class="cta-input" type="text" id="empresa" placeholder="Nombre de tu empresa" required />
+      <input class="cta-input" type="tel" id="telefono" placeholder="Teléfono de contacto" required />
+      <button type="submit" class="cta-btn" id="submitBtn">Solicitar diagnóstico gratuito</button>
     </form>
+
+    <div id="ctaMessage" class="cta-message"></div>
 
     <p class="cta-trust">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -726,13 +737,50 @@
     fade.observe(c);
   });
 
-  function handleSubmit(e) {
+const SUPABASE_URL = 'https://pmatmmwororvxzyneesq.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_odVCjKjMJ8dgupXETAj17w_TmlwRvR9';
+
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = '✓ Solicitud enviada';
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('ctaMessage');
+    btn.textContent = 'Enviando...';
     btn.disabled = true;
-    e.target.querySelector('input').value = '';
-  }
+
+    const data = {
+      nombre: document.getElementById('nombre').value,
+      email: document.getElementById('email').value,
+      empresa: document.getElementById('empresa').value,
+      telefono: document.getElementById('telefono').value
+    };
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/contactos`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        msg.className = 'cta-message success';
+        msg.textContent = '✓ ¡Solicitud enviada! Te contactaremos en menos de 48 horas.';
+        this.reset();
+      } else {
+        throw new Error('Error al enviar');
+      }
+    } catch (err) {
+      msg.className = 'cta-message error';
+      msg.textContent = '✗ Hubo un error. Por favor intenta de nuevo.';
+    }
+
+    btn.textContent = 'Solicitar diagnóstico gratuito';
+    btn.disabled = false;
+  });
 </script>
 
 </body>
