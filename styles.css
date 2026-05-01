@@ -343,7 +343,8 @@ footer {
 .nav-item { position: relative; }
 
 .nav-dropdown {
-  position: absolute; top: calc(100% + 1rem); left: 50%;
+  position: absolute; top: 100%; left: 50%;
+  padding-top: 1rem;
   transform: translateX(-50%);
   background: #fff; border: 1px solid var(--border);
   border-radius: 12px; box-shadow: var(--shadow-lg);
@@ -355,7 +356,7 @@ footer {
 
 .nav-item:hover .nav-dropdown {
   opacity: 1; visibility: visible; pointer-events: all;
-  top: calc(100% + .5rem);
+  top: 100%;
 }
 
 .nav-dropdown::before {
