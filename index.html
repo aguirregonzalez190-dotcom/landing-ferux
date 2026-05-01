@@ -12,7 +12,32 @@
   <nav>
     <div class="logo" onclick="navigate('home')">Fe<span>rux</span></div>
     <ul>
-      <li><a data-page="servicios" onclick="navigate('servicios')">Servicios</a></li>
+      <li class="nav-item">
+        <a data-page="servicios" onclick="navigate('servicios')">Servicios</a>
+        <div class="nav-dropdown">
+          <a onclick="navigate('servicios')">
+            <div class="nav-dd-icon">📊</div>
+            <div class="nav-dd-text">
+              <strong>Auditoría Energética</strong>
+              <span>Diagnóstico de consumo de tu flota</span>
+            </div>
+          </a>
+          <a onclick="navigate('servicios')">
+            <div class="nav-dd-icon">🤖</div>
+            <div class="nav-dd-text">
+              <strong>Automatización, IA & TI</strong>
+              <span>Tecnología aplicada a tu operación</span>
+            </div>
+          </a>
+          <a onclick="navigate('servicios')">
+            <div class="nav-dd-icon">📋</div>
+            <div class="nav-dd-text">
+              <strong>Postulación a Proyectos</strong>
+              <span>Acceso a fondos y financiamiento</span>
+            </div>
+          </a>
+        </div>
+      </li>
       <li><a data-page="nosotros" onclick="navigate('nosotros')">Nosotros</a></li>
       <li><a data-page="equipo" onclick="navigate('equipo')">Equipo</a></li>
       <li><a data-page="clientes" onclick="navigate('clientes')">Clientes</a></li>

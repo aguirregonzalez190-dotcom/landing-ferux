@@ -1,3 +1,4 @@
+<!-- HERO -->
 <section id="hero">
   <div class="hero-content">
     <div class="hero-badge">
@@ -12,22 +13,113 @@
       <button class="btn btn-secondary" onclick="navigate('servicios')">Ver servicios</button>
     </div>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">30%</div>
-        <div class="stat-label">Ahorro en combustible</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">+15</div>
-        <div class="stat-label">Proyectos financiados</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Líneas de solución</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">Años de experiencia</div>
+      <div class="stat"><div class="stat-num">30%</div><div class="stat-label">Ahorro en combustible</div></div>
+      <div class="stat"><div class="stat-num">+15</div><div class="stat-label">Proyectos financiados</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Líneas de solución</div></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Años de experiencia</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUMEN SERVICIOS -->
+<section class="home-services">
+  <div class="home-section-header">
+    <span class="section-tag">Servicios</span>
+    <h2 class="section-title">Lo que hacemos</h2>
+    <p class="section-sub">Tres líneas de trabajo complementarias para transformar la eficiencia de tu flota.</p>
+  </div>
+  <div class="home-services-grid">
+    <div class="home-service-card" onclick="navigate('servicios')">
+      <div class="hs-icon">📊</div>
+      <div class="hs-num">01</div>
+      <h3>Auditoría Energética</h3>
+      <p>Diagnóstico profundo del consumo de tu flota. Identificamos pérdidas y diseñamos un plan de acción concreto.</p>
+      <span class="hs-link">Ver detalle →</span>
+    </div>
+    <div class="home-service-card" onclick="navigate('servicios')">
+      <div class="hs-icon">🤖</div>
+      <div class="hs-num">02</div>
+      <h3>Automatización, IA & TI</h3>
+      <p>Tecnología aplicada a tu operación: telemetría, inteligencia artificial y dashboards de eficiencia en tiempo real.</p>
+      <span class="hs-link">Ver detalle →</span>
+    </div>
+    <div class="home-service-card" onclick="navigate('servicios')">
+      <div class="hs-icon">📋</div>
+      <div class="hs-num">03</div>
+      <h3>Postulación a Proyectos</h3>
+      <p>Te acompañamos en la formulación y presentación de proyectos para acceder a fondos y financiamiento disponible.</p>
+      <span class="hs-link">Ver detalle →</span>
+    </div>
+  </div>
+</section>
+
+<!-- SNIPPET FRANCISCA -->
+<section class="home-leader" onclick="navigate('equipo')">
+  <div class="hl-image">
+    <div class="hl-avatar">FB</div>
+    <div class="hl-badge">👑 Directora</div>
+  </div>
+  <div class="hl-content">
+    <span class="section-tag">Equipo</span>
+    <h2 class="section-title">Liderado por quien conoce el sector</h2>
+    <p class="hl-quote">"Más de 10 años transformando flotas de carga en operaciones más eficientes, rentables y sostenibles."</p>
+    <p class="hl-name">Ing. Francisca Barriga</p>
+    <p class="hl-title">Diplomada en Eficiencia Energética · Coordinadora Giro Limpio</p>
+    <span class="hs-link">Conocer más sobre Francisca →</span>
+  </div>
+</section>
+
+<!-- TESTIMONIOS DESTACADOS -->
+<section class="home-testimonials">
+  <div class="home-section-header">
+    <span class="section-tag">Clientes</span>
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-sub">Resultados reales en empresas de transporte y logística.</p>
+  </div>
+  <div class="home-testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">La auditoría nos mostró que perdíamos 24% de combustible en rutas mal optimizadas. Recuperamos la inversión en menos de 4 meses.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: linear-gradient(135deg, #2d7a5f, #4a9b7f);">RN</div>
+        <div><div class="author-name">Roberto Núñez</div><div class="author-title">Director de Ops · TransNorte</div></div>
       </div>
     </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Aprobaron nuestro proyecto de renovación de flota con financiamiento subsidiado gracias al acompañamiento experto en la formulación.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: linear-gradient(135deg, #d4a574, #e8b896);">CM</div>
+        <div><div class="author-name">Cecilia Morales</div><div class="author-title">Gerenta General · Logística del Valle</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Implementamos telemetría en 80 camiones. Ahora tenemos visibilidad total y redujimos costos operativos 18% en el primer trimestre.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: linear-gradient(135deg, #4a9b7f, #6b8c7d);">PH</div>
+        <div><div class="author-name">Pablo Herrera</div><div class="author-title">Jefe de Flota · Grupo Cargamax</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="home-testimonials-cta">
+    <button class="btn btn-secondary" onclick="navigate('clientes')">Ver todos los testimonios</button>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="cta-content">
+    <h2>¿Cuánto estás gastando de más en combustible?</h2>
+    <p>Solicita un diagnóstico energético inicial sin costo. Te enviaremos un análisis preliminar en 48 horas.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" style="background: rgba(255,255,255,.95); color: var(--green);" onclick="navigate('contactar')">Solicitar diagnóstico gratuito</button>
+    </div>
+    <p class="cta-trust" style="margin-top: 1.2rem;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Sin compromiso. Información confidencial.
+    </p>
   </div>
 </section>
