@@ -3,7 +3,7 @@ const SUPABASE_KEY = 'sb_publishable_odVCjKjMJ8dgupXETAj17w_TmlwRvR9';
 
 const pages = ['home', 'servicios', 'nosotros', 'equipo', 'clientes', 'contactar'];
 
-async function navigate(page) {
+async function navigate(page, anchor = null) {
   if (!pages.includes(page)) page = 'home';
 
   try {
@@ -20,7 +20,15 @@ async function navigate(page) {
 
   window.location.hash = page === 'home' ? '' : page;
   updateNav(page);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  if (anchor) {
+    setTimeout(() => {
+      const el = document.getElementById(anchor);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   if (page === 'contactar') initForm();
   initAnimations();

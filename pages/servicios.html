@@ -1,51 +1,198 @@
-<section id="servicios">
-  <div class="section-header center">
+<!-- HEADER SERVICIOS -->
+<section class="srv-header">
+  <div class="home-section-header">
     <span class="section-tag">Servicios</span>
     <h2 class="section-title">Tres líneas de trabajo,<br>un solo objetivo</h2>
-    <p class="section-sub">Abordamos la eficiencia energética del transporte de carga de forma integral, desde el diagnóstico hasta la implementación y el financiamiento.</p>
+    <p class="section-sub">Abordamos la eficiencia energética del transporte de carga de forma integral: desde el diagnóstico hasta la implementación tecnológica y el financiamiento.</p>
   </div>
-  <div class="pillars-grid">
-    <div class="pillar-card">
-      <div class="pillar-num">01</div>
-      <div class="pillar-icon">📊</div>
-      <div class="pillar-label">Línea 1</div>
-      <h3>Auditoría Energética</h3>
-      <p>Diagnóstico profundo del consumo energético de tu flota. Identificamos dónde se pierde energía y cómo recuperarla con acciones concretas y medibles.</p>
-      <ul class="pillar-list">
-        <li>Análisis de consumo por unidad y ruta</li>
-        <li>Indicadores de eficiencia (KPIs)</li>
-        <li>Detección de ineficiencias</li>
-        <li>Plan de acción priorizado</li>
-        <li>Benchmarking sectorial</li>
-      </ul>
+  <div class="srv-nav">
+    <a onclick="document.getElementById('auditoria').scrollIntoView({behavior:'smooth'})">📊 Auditoría Energética</a>
+    <a onclick="document.getElementById('tecnologia').scrollIntoView({behavior:'smooth'})">🤖 Automatización & TI</a>
+    <a onclick="document.getElementById('postulacion').scrollIntoView({behavior:'smooth'})">📋 Postulación a Proyectos</a>
+  </div>
+</section>
+
+<!-- LÍNEA 1: AUDITORÍA -->
+<section class="srv-block" id="auditoria">
+  <div class="srv-block-inner">
+    <div class="srv-block-label">
+      <div class="srv-num-big">01</div>
+      <span class="section-tag">Línea 1</span>
     </div>
-    <div class="pillar-card">
-      <div class="pillar-num">02</div>
-      <div class="pillar-icon">🤖</div>
-      <div class="pillar-label">Línea 2</div>
-      <h3>Automatización, IA & TI</h3>
-      <p>Implementamos tecnología que transforma tu operación: sistemas de monitoreo en tiempo real, inteligencia artificial aplicada y herramientas digitales a medida.</p>
-      <ul class="pillar-list">
-        <li>Telemetría y monitoreo GPS</li>
-        <li>IA para optimización de rutas</li>
-        <li>Dashboards de eficiencia</li>
-        <li>Integración de sistemas ERP/TMS</li>
-        <li>Automatización de reportes</li>
-      </ul>
+    <div class="srv-block-content">
+      <div class="srv-block-icon">📊</div>
+      <h2 class="section-title">Auditoría Energética</h2>
+      <p class="srv-intro">Diagnóstico profundo del consumo energético de tu flota. Identificamos exactamente dónde se pierde energía y diseñamos un plan de acción concreto, medible y priorizado para recuperarla.</p>
+
+      <div class="srv-features-grid">
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🔍</div>
+          <h4>Análisis de consumo</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Evaluamos cada unidad y ruta para detectar patrones de ineficiencia.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📈</div>
+          <h4>Indicadores de eficiencia (KPIs)</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Definimos métricas clave adaptadas a tu operación específica.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">⚠️</div>
+          <h4>Detección de ineficiencias</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Identificamos las principales fuentes de pérdida energética.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🗺️</div>
+          <h4>Plan de acción priorizado</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Entregamos un roadmap claro con acciones ordenadas por impacto y costo.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🏆</div>
+          <h4>Benchmarking sectorial</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Comparamos tu desempeño con referentes del sector transporte.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📄</div>
+          <h4>Informe ejecutivo</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Documentación completa para decisiones estratégicas y presentación a directivos.</p>
+        </div>
+      </div>
+
+      <div class="srv-result">
+        <div class="srv-result-num">30%</div>
+        <div>
+          <strong>Ahorro promedio en combustible</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="navigate('contactar')">Solicitar auditoría gratuita</button>
     </div>
-    <div class="pillar-card">
-      <div class="pillar-num">03</div>
-      <div class="pillar-icon">📋</div>
-      <div class="pillar-label">Línea 3</div>
-      <h3>Postulación a Proyectos</h3>
-      <p>Acompañamos tu empresa en la formulación y presentación de proyectos de eficiencia para acceder a fondos, subsidios y programas de financiamiento disponibles.</p>
-      <ul class="pillar-list">
-        <li>Identificación de convocatorias</li>
-        <li>Formulación técnica y económica</li>
-        <li>Documentación completa</li>
-        <li>Seguimiento de evaluación</li>
-        <li>Gestión post-aprobación</li>
-      </ul>
+  </div>
+</section>
+
+<!-- LÍNEA 2: TECNOLOGÍA -->
+<section class="srv-block srv-block-alt" id="tecnologia">
+  <div class="srv-block-inner">
+    <div class="srv-block-label">
+      <div class="srv-num-big">02</div>
+      <span class="section-tag">Línea 2</span>
+    </div>
+    <div class="srv-block-content">
+      <div class="srv-block-icon">🤖</div>
+      <h2 class="section-title">Automatización, IA & TI</h2>
+      <p class="srv-intro">Implementamos tecnología que transforma tu operación: sistemas de monitoreo en tiempo real, inteligencia artificial aplicada y herramientas digitales diseñadas a medida para el transporte de carga.</p>
+
+      <div class="srv-features-grid">
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📡</div>
+          <h4>Telemetría y monitoreo GPS</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Visibilidad completa de tu flota en tiempo real desde cualquier dispositivo.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🧠</div>
+          <h4>IA para optimización de rutas</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Algoritmos inteligentes que reducen tiempos y consumo de combustible.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📊</div>
+          <h4>Dashboards de eficiencia</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Paneles visuales con métricas clave para que cada supervisor tome mejores decisiones.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🔗</div>
+          <h4>Integración ERP/TMS</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conectamos las nuevas herramientas con tus sistemas existentes sin fricciones.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">⚙️</div>
+          <h4>Automatización de reportes</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reportes automáticos que ahorran horas de trabajo manual cada semana.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🛠️</div>
+          <h4>Soporte y mantenimiento</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Acompañamiento continuo para asegurar el funcionamiento óptimo de cada herramienta.</p>
+        </div>
+      </div>
+
+      <div class="srv-result">
+        <div class="srv-result-num">18%</div>
+        <div>
+          <strong>Reducción promedio en costos operativos</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="navigate('contactar')">Consultar sobre tecnología</button>
+    </div>
+  </div>
+</section>
+
+<!-- LÍNEA 3: POSTULACIÓN -->
+<section class="srv-block" id="postulacion">
+  <div class="srv-block-inner">
+    <div class="srv-block-label">
+      <div class="srv-num-big">03</div>
+      <span class="section-tag">Línea 3</span>
+    </div>
+    <div class="srv-block-content">
+      <div class="srv-block-icon">📋</div>
+      <h2 class="section-title">Postulación a Proyectos</h2>
+      <p class="srv-intro">Acompañamos a tu empresa en la formulación y presentación de proyectos de eficiencia energética para acceder a fondos, subsidios y programas de financiamiento disponibles a nivel nacional e internacional.</p>
+
+      <div class="srv-features-grid">
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🔎</div>
+          <h4>Identificación de convocatorias</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Monitoreamos constantemente los fondos disponibles relevantes para tu sector.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📝</div>
+          <h4>Formulación técnica y económica</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elaboramos propuestas sólidas que cumplen todos los requisitos exigidos.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">📁</div>
+          <h4>Documentación completa</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gestionamos toda la documentación necesaria para la postulación.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🔄</div>
+          <h4>Seguimiento de evaluación</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Acompañamos el proceso hasta la resolución final del proyecto.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">✅</div>
+          <h4>Gestión post-aprobación</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Te ayudamos a cumplir los compromisos adquiridos tras la aprobación.</p>
+        </div>
+        <div class="srv-feature">
+          <div class="srv-feature-icon">🌎</div>
+          <h4>Cobertura regional</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Experiencia en fondos de Chile, Argentina y Uruguay con conocimiento normativo profundo.</p>
+        </div>
+      </div>
+
+      <div class="srv-result">
+        <div class="srv-result-num">+15</div>
+        <div>
+          <strong>Proyectos aprobados con financiamiento</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="navigate('contactar')">Consultar sobre postulación</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="cta-content">
+    <h2>¿Por dónde quieres empezar?</h2>
+    <p>Cuéntanos tu situación y te orientamos hacia la línea de trabajo que más se adapta a tu empresa.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" style="background: rgba(255,255,255,.95); color: var(--green);" onclick="navigate('contactar')">Hablar con un especialista</button>
     </div>
   </div>
 </section>

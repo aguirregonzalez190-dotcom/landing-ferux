@@ -344,7 +344,7 @@ footer {
 
 .nav-dropdown {
   position: absolute; top: 100%; left: 50%;
-  padding-top: 1rem;
+  padding-top: .8rem;
   transform: translateX(-50%);
   background: #fff; border: 1px solid var(--border);
   border-radius: 12px; box-shadow: var(--shadow-lg);
@@ -437,6 +437,91 @@ footer {
 .home-testimonials { padding: 5rem 6%; background: var(--bg-soft); }
 .home-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
 .home-testimonials-cta { text-align: center; }
+
+/* ── SERVICIOS DETALLE ── */
+.srv-header {
+  padding: 6rem 6% 3rem; background: var(--bg-soft); text-align: center;
+}
+
+.srv-nav {
+  display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.srv-nav a {
+  background: var(--bg); border: 1px solid var(--border);
+  padding: .6rem 1.2rem; border-radius: 50px;
+  font-size: .85rem; font-weight: 600; color: var(--text);
+  cursor: pointer; transition: all .2s; text-decoration: none;
+}
+.srv-nav a:hover { border-color: var(--green); color: var(--green); background: rgba(45,122,95,.05); }
+
+.srv-block { padding: 5rem 6%; background: var(--bg); }
+.srv-block-alt { background: var(--bg-soft); }
+
+.srv-block-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 120px 1fr; gap: 3rem;
+}
+
+.srv-block-label { display: flex; flex-direction: column; align-items: center; padding-top: .5rem; }
+
+.srv-num-big {
+  font-size: 4rem; font-weight: 900; line-height: 1;
+  color: rgba(45,122,95,.12); margin-bottom: .8rem;
+}
+
+.srv-block-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.srv-intro {
+  font-size: 1.05rem; color: var(--muted); line-height: 1.8;
+  margin-bottom: 2.5rem; max-width: 700px;
+}
+
+.srv-features-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.srv-feature {
+  background: var(--bg-soft); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.3rem;
+  transition: all .2s;
+}
+.srv-block-alt .srv-feature { background: var(--bg); }
+.srv-feature:hover { border-color: var(--green); transform: translateY(-2px); }
+
+.srv-feature-icon { font-size: 1.4rem; margin-bottom: .6rem; }
+.srv-feature h4 { font-size: .9rem; font-weight: 700; color: var(--green); margin-bottom: .4rem; }
+.srv-feature p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+.srv-result {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: rgba(45,122,95,.06); border: 1px solid rgba(45,122,95,.15);
+  border-radius: 12px; padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.srv-result-num {
+  font-size: 3rem; font-weight: 900; color: var(--green);
+  line-height: 1; flex-shrink: 0;
+}
+
+.srv-result strong { display: block; color: var(--text); font-size: .95rem; margin-bottom: .3rem; }
+.srv-result p { color: var(--muted); font-size: .85rem; margin: 0; }
+
+/* ── RESPONSIVE SERVICIOS ── */
+@media (max-width: 900px) {
+  .srv-block-inner { grid-template-columns: 1fr; gap: 1rem; }
+  .srv-block-label { flex-direction: row; align-items: center; gap: 1rem; }
+  .srv-num-big { font-size: 2.5rem; margin: 0; }
+  .srv-features-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .srv-features-grid { grid-template-columns: 1fr; }
+  .srv-result { flex-direction: column; text-align: center; }
+}
 
 /* ── PAGE TRANSITION ── */
 .page-enter {
